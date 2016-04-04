@@ -12,5 +12,8 @@ Adding modules to the `Puppetfile` will manage them in the standard `modules`
 directory using r10k.
 
 ## Starter code
+##
+##
+##
 
 Note that this repository includes some incomplete starter code.
