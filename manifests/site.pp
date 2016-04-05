@@ -44,10 +44,13 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
   
- exec {"cowsay 'Welcome to ${::fqdn}!'>/etc/motd":
-    path    => '/usr/bin:/usr/local/bin',
-    creates =>'/etc/motd',
-}
+  class users {
+    user { 'fundamentals':
+      ensure => present,
+      # password => 'puppet8#labs', # Windows requires a plain text password
+      # groups => ['Users'], # Display in Windows Control Panel
+  }
+  }
 
 }
 
