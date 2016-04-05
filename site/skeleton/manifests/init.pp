@@ -12,4 +12,4 @@ class skeleton {
     mode    => '0644',
     source  => 'puppet:///modules/skeleton/bashrc',
   }
-  }
+  
