@@ -43,14 +43,7 @@ node default {
   # Example:
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
-  
-  class users {
-    user { 'fundamentals':
-      ensure => present,
-      # password => 'puppet8#labs', # Windows requires a plain text password
-      # groups => ['Users'], # Display in Windows Control Panel
   }
-  }
-
+include users
 }
 
